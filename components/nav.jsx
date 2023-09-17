@@ -1,12 +1,9 @@
 'use client';
 import React from 'react';
-// import Image from 'next/image';
 import Link from 'next/link';
 import styles from '@/styles/components/Nav.module.scss';
-// import logo from '@/components/images/logo.png';
 import navtoggle from '@/components/navtoggle.js';
 import Image from 'next/image';
-import pfp from '@/assets/images/defaultPfp.png';
 import menuImage from '@/assets/images/menu.png';
 
 
