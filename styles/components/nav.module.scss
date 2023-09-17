@@ -35,12 +35,15 @@
 
 .listElement {
     @include nav-font;
+    @include navbtn;
     list-style: none;
 }
 
 .a {
     text-decoration: none;
 }
+
+
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 ///menu css//////////////////////////////////////////////////////////////////////////////////////////////
@@ -201,29 +204,29 @@
 
 
 //navigation bar hover effect 
-@media (min-width:1000px) {
+// @media (min-width:1000px) {
 
-    .nav2>ul>a:link,
-    .nav2>ul>a:visited {
-        color: $secondary-color;
-        text-decoration: none;
-        position: relative;
-    }
+//     .nav2>ul>a:link,
+//     .nav2>ul>a:visited {
+//         color: $secondary-color;
+//         text-decoration: none;
+//         position: relative;
+//     }
 
-    .nav2>ul>a::after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        background-color: $secondary-color;
-        bottom: -4px;
-        left: 0;
-        transform: scale(0);
-        transition: 0.2s all ease-out;
-    }
+//     .nav2>ul>a::after {
+//         content: "";
+//         position: absolute;
+//         width: 100%;
+//         height: 2px;
+//         background-color: $secondary-color;
+//         bottom: -4px;
+//         left: 0;
+//         transform: scale(0);
+//         transition: 0.2s all ease-out;
+//     }
 
-    .nav2>ul>a:hover::after {
-        transform: scale(1);
+//     .nav2>ul>a:hover::after {
+//         transform: scale(1);
 
-    }
-}
+//     }
+// }

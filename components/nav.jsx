@@ -26,34 +26,14 @@ const Nav = () => {
 
                     <nav className={styles.nav2} id='SecondaryNav' data-visible="false">
                         <ul >
-                            <a className={styles.a} href="/" replace onClick={() => { document.getElementById("SecondaryNav").setAttribute("data-visible", "false"); document.getElementById("NavToggle2").setAttribute("data-visible", "false"); }} >
-                                <li className={styles.listElement}>
-                                    Home
-                                </li>
-                            </a>
-                            <a className={styles.a} href="/#about" replace onClick={() => { document.getElementById("SecondaryNav").setAttribute("data-visible", "false"); document.getElementById("NavToggle2").setAttribute("data-visible", "false"); }} >
-                                <li className={styles.listElement}>
-                                    About
-                                </li>
-                            </a>
-                            <a className={styles.a} href="/#speakers" replace onClick={() => { document.getElementById("SecondaryNav").setAttribute("data-visible", "false"); document.getElementById("NavToggle2").setAttribute("data-visible", "false"); }} >
-                                <li className={styles.listElement}>
-                                    Speakers
-                                </li>
-                            </a>
-                            <a className={styles.a} href="/#schedule" replace onClick={() => { document.getElementById("SecondaryNav").setAttribute("data-visible", "false"); document.getElementById("NavToggle2").setAttribute("data-visible", "false"); }} >
-                                <li className={styles.listElement}>
-                                    Schedule
-                                </li>
-                            </a>
                             <Link className={styles.a} href="/home/registrations" replace onClick={() => { document.getElementById("SecondaryNav").setAttribute("data-visible", "false"); document.getElementById("NavToggle2").setAttribute("data-visible", "false"); }} >
                                 <li className={styles.listElement}>
-                                    Registration
+                                    Sign up
                                 </li>
                             </Link>
                             <a className={styles.a} href="/#contact" replace onClick={() => { document.getElementById("SecondaryNav").setAttribute("data-visible", "false"); document.getElementById("NavToggle2").setAttribute("data-visible", "false"); }} >
                                 <li className={styles.listElement}>
-                                    Contact
+                                    Login
                                 </li>
                             </a>
                         </ul>
