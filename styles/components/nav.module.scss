@@ -1,0 +1,229 @@
+@import '/styles/abstract/variable';
+@import '/styles/abstract/mixin';
+
+.header {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 3.6em;
+    justify-content: right;
+    opacity: 0.98;
+    background: $primary-color;
+    z-index: 1000;
+}
+
+.secondaryNavContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+
+}
+
+.logoLink {
+    margin-top: 4px;
+    height: 50px;
+    width: 128px;
+    @include nav-font;
+}
+
+.logoLink {
+    margin-top: 4px;
+    height: 50px;
+    width: 128px;
+    @include nav-font;
+}
+
+.listElement {
+    @include nav-font;
+    list-style: none;
+}
+
+.a {
+    text-decoration: none;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+///menu css//////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+.menu {
+    padding: 0;
+    margin-left: -7px;
+    margin-top: -4px;
+    position: relative;
+    width: 29px;
+    height: 29px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.menuImage {
+    width: auto;
+    height: 100%;
+    margin-left: -1px;
+}
+
+.navToggle2 {
+    position: absolute;
+    height: 2.4em;
+    width: 2.4em;
+    z-index: 9999;
+    top: 0.9rem;
+    right: 5rem;
+    background: transparent;
+    border: hidden;
+    cursor: pointer;
+    display: block;
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+///pfp css //////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+.profilePic {
+    padding: 0;
+    margin-left: -7px;
+    margin-top: -4px;
+    position: relative;
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: solid 1px gray;
+}
+
+.pfp {
+    width: auto;
+    height: 100%;
+    margin-left: -1px;
+}
+
+
+.navToggle {
+    position: absolute;
+    height: 2.4em;
+    width: 2.4em;
+    z-index: 9999;
+    top: 0.9rem;
+    right: 2rem;
+    background: transparent;
+    border: hidden;
+    cursor: pointer;
+    display: block;
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// nav 1//////////////////////////////////////////////////////////////////////////////////////////////////////
+/// ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+.nav>ul {
+    @include profile-menu;
+    visibility: hidden;
+}
+
+.nav[data-visible="true"]>ul {
+    @include profile-menu;
+    visibility: visible;
+    margin-top: 4em;
+}
+
+
+
+.nav {
+    padding-right: min(5%, 1rem);
+    align-self: right;
+}
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// nav 2//////////////////////////////////////////////////////////////////////////////////////////////////////
+/// ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+@media (min-width:1000px) {
+
+    .nav2 {
+        width: auto;
+    }
+
+    .nav2>ul {
+
+        display: flex;
+        justify-content: start;
+        padding-left: 2em;
+        gap: 2em;
+    }
+
+}
+
+.navToggle2 {
+    visibility: hidden;
+}
+
+///////for smaller screens
+@media (max-width:999px) {
+    .navToggle2 {
+        visibility: visible;
+    }
+
+
+    .nav2 {
+        width: auto;
+        @include secondary-menu;
+        visibility: hidden;
+    }
+
+
+    .nav2>ul {
+        @include secondary-menu;
+        visibility: hidden;
+    }
+
+    .nav2[data-visible="true"]>ul {
+        @include secondary-menu;
+        visibility: visible;
+        margin-top: 3em;
+        margin-left: 13em;
+        gap: 2em;
+    }
+
+    .nav2 {
+        align-self: right;
+    }
+
+}
+
+
+
+
+//navigation bar hover effect 
+@media (min-width:1000px) {
+
+    .nav2>ul>a:link,
+    .nav2>ul>a:visited {
+        color: $secondary-color;
+        text-decoration: none;
+        position: relative;
+    }
+
+    .nav2>ul>a::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: $secondary-color;
+        bottom: -4px;
+        left: 0;
+        transform: scale(0);
+        transition: 0.2s all ease-out;
+    }
+
+    .nav2>ul>a:hover::after {
+        transform: scale(1);
+
+    }
+}
