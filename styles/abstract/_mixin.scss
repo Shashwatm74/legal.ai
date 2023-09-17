@@ -1,9 +1,10 @@
 @mixin nav-font {
     text-decoration: none;
-    font-family: Poppins;
+    font-family: $primary-font;
     font-weight: 600;
     color: $secondary-color;
     user-select: none;
+    font-size: 1.5em;
 }
 
 @mixin secondary-menu {
@@ -19,37 +20,37 @@
     border-radius: 8px;
     padding: 1em;
     padding-left: 2em;
-    box-shadow: 0px 0px 12px 0px $primary-color;
-    background-color: $primary-color;
+    box-shadow: 0px 0px 12px 0px $secondary-color;
+    background-color: $secondary-color;
 }
 
-@mixin profile-menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: right;
-    z-index: 999;
-    height: auto;
-    width: 200px;
-    gap: 1em;
-    top: 0;
-    border-radius: 8px;
-    padding: 1em;
-    padding-left: 2em;
-    box-shadow: 0px 0px 12px 0px $primary-color;
-    background-color: $primary-color;
-}
+// @mixin profile-menu {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: start;
+//     align-items: right;
+//     z-index: 999;
+//     height: auto;
+//     width: 200px;
+//     gap: 1em;
+//     top: 0;
+//     border-radius: 8px;
+//     padding: 1em;
+//     padding-left: 2em;
+//     box-shadow: 0px 0px 12px 0px $primary-color;
+//     background-color: $primary-color;
+// }
 
 @mixin navbtn {
-    font-family: 'lato';
+    font-family: $primary-font;
     font-size: 0.75rem;
     background: none;
     border: 0.175em solid $secondary-color;
-    padding: 1.4em 3.3em;
+    padding: 0.7em 2.3em;
     color: $secondary-color;
     text-transform: uppercase;
     letter-spacing: 0.25em;
-    border-radius: 0.5em;
+    border-radius: 1.5em;
     cursor: pointer;
 
     &:focus {

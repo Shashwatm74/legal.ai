@@ -6,31 +6,28 @@
     display: flex;
     width: 100%;
     height: 3.6em;
-    justify-content: right;
+    justify-content: left;
     opacity: 0.98;
     background: $primary-color;
     z-index: 1000;
 }
 
 .secondaryNavContainer {
+    margin-left: 5%;
     display: flex;
     justify-content: space-between;
-    width: 75%;
-
+    width: 90%;
 }
 
 .logoLink {
-    margin-top: 4px;
+    margin-top: 10px;
     height: 50px;
     width: 128px;
     @include nav-font;
 }
 
-.logoLink {
-    margin-top: 4px;
-    height: 50px;
-    width: 128px;
-    @include nav-font;
+.logo {
+    margin: 0px;
 }
 
 .listElement {
@@ -82,23 +79,23 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 ///pfp css //////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////
-.profilePic {
-    padding: 0;
-    margin-left: -7px;
-    margin-top: -4px;
-    position: relative;
-    width: 32px;
-    height: 32px;
-    overflow: hidden;
-    border-radius: 50%;
-    border: solid 1px gray;
-}
+// .profilePic {
+//     padding: 0;
+//     margin-left: -7px;
+//     margin-top: -4px;
+//     position: relative;
+//     width: 32px;
+//     height: 32px;
+//     overflow: hidden;
+//     border-radius: 50%;
+//     border: solid 1px gray;
+// }
 
-.pfp {
-    width: auto;
-    height: 100%;
-    margin-left: -1px;
-}
+// .pfp {
+//     width: auto;
+//     height: 100%;
+//     margin-left: -1px;
+// }
 
 
 .navToggle {
@@ -121,23 +118,23 @@
 /// ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-.nav>ul {
-    @include profile-menu;
-    visibility: hidden;
-}
+// .nav>ul {
+//     @include profile-menu;
+//     visibility: hidden;
+// }
 
-.nav[data-visible="true"]>ul {
-    @include profile-menu;
-    visibility: visible;
-    margin-top: 4em;
-}
+// .nav[data-visible="true"]>ul {
+//     @include profile-menu;
+//     visibility: visible;
+//     margin-top: 4em;
+// }
 
 
 
-.nav {
-    padding-right: min(5%, 1rem);
-    align-self: right;
-}
+// .nav {
+//     padding-right: min(5%, 1rem);
+//     align-self: right;
+// }
 
 
 
