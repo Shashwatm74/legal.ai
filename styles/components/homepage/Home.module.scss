@@ -1,0 +1,73 @@
+@import '@/styles/abstract/mixin';
+@import '@/styles/abstract/variable';
+@import url('https://fonts.googleapis.com/css2?family=Manrope&family=Source+Code+Pro:ital@1&display=swap');
+
+
+
+.home {
+    @include section;
+    z-index: 1;
+}
+
+.sectionWrapper {
+    @include sectionWrapper;
+    height: 95vh;
+}
+
+.homeImage {
+    grid-row: 10/span 70;
+    grid-column: 6/ span 7;
+    transform: translate(100px, 0);
+
+}
+
+.title {
+    grid-row: 30 /span 30;
+    grid-column: 2 /span 4;
+    transform: translate(-50px, 0);
+
+}
+
+.title>h1 {
+    font-family: $primary-font;
+    color: $secondary-color;
+    font-size: 7.2em;
+    font-weight: 100;
+}
+
+.title>p {
+    font-family: $primary-font;
+    color: $secondary-color;
+    font-size: 1.7em;
+    font-weight: 100;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.btnContainer {
+    grid-row: 75;
+    grid-column: 7;
+    transform: rotate(90deg);
+    width: 50px;
+    height: 50px;
+
+}
+
+.btn {
+    width: 50px;
+    height: 50px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 4em;
+    color: transparent;
+    border: none;
+    border-radius: 50%;
+
+}
+
+.span_arrow {
+    width: 50px;
+    height: 50px;
+    color: $secondary-color;
+    border-radius: 50%;
+    cursor: pointer;
+}

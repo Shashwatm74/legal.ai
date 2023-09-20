@@ -1,0 +1,44 @@
+@import '@/styles/abstract/mixin';
+@import '@/styles/abstract/variable';
+
+.contact {
+  height: max(350px, 50vh);
+}
+
+.container {
+  display: grid;
+  column-gap: 5vw;
+  padding: 2vw;
+}
+
+.touchytext {
+  font-family: $primary-font;
+  font-size: larger;
+  grid-column: 2;
+  grid-row: 2;
+  color: $secondary-color;
+}
+
+.connectionimage {
+  grid-column: 3/span 4;
+  grid-row: 2 / span 3;
+}
+
+.connectionlinks {
+  grid-column: 2 / span 4;
+  grid-row: 4;
+  display: flex;
+}
+
+.fa {
+  border-radius: 50%;
+  margin: 3px 2px;
+  padding: 20px;
+  font-size: 9px;
+  height: 10px;
+  width: 10px;
+  text-align: center;
+  background: rgb(39, 39, 39);
+  color: $primary-color;
+  font-size: medium;
+}

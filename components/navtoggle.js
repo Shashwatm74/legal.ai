@@ -5,6 +5,10 @@ if (typeof window === 'object') {
     const navToggle2 = document.getElementById('NavToggle2');
     const menu = document.getElementById('menu');
     const pfp = document.getElementById('pfp');
+    const header = document.getElementById('header');
+    const navLogo = document.getElementById('navLogo');
+    const listele1 = document.getElementById('listele1');
+    const listele2 = document.getElementById('listele2');
     {
         //to set the data visible to none if not clicked on the menu or profile
         document?.addEventListener('click', (event) => {
@@ -66,4 +70,20 @@ if (typeof window === 'object') {
         });
 
     }
+
+    window.onscroll = function () {
+        if (document.body.scrollTop >= 1 || document.documentElement.scrollTop >= 1) {
+            header?.setAttribute("color", "white");
+            navLogo?.setAttribute("color", "white");
+            listele1?.setAttribute("color", "white");
+            listele2?.setAttribute("color", "white");
+        }
+        else {
+            header?.setAttribute("color", "black");
+            navLogo?.setAttribute("color", "black");
+            listele1?.setAttribute("color", "black");
+            listele2?.setAttribute("color", "black");
+        }
+    };
+
 }

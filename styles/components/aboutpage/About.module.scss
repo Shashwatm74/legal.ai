@@ -1,0 +1,77 @@
+@import "@/styles/abstract/mixin";
+@import "@/styles/abstract/variable";
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text&display=swap");
+
+.about {
+  @include section;
+  justify-items: center;
+  column-gap: 1em;
+}
+
+.sectionWrapper {
+  @include sectionWrapper;
+  column-gap: 1em;
+}
+
+
+.heading {
+
+  font-family: $primary-font;
+  font-size: 5em;
+  margin: 20px;
+  margin-left: 85px;
+  grid-column: 1/ span 6;
+  grid-row: 7 / span 20;
+  color: $secondary-color;
+}
+
+.content {
+  grid-column: 1/ span 12;
+  grid-row: 26 / span 14;
+  color: $secondary-color;
+  font-family: $primary-font;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.card1,
+.card2,
+.card3,
+.card4,
+.card5 {
+  width: 13em;
+  margin-left: 50px;
+  border-radius: 5px;
+  color: $secondary-color;
+  font-family: $primary-font;
+}
+
+.card1 {
+  grid-row: 45/span 35;
+  grid-column: 1/span 2;
+
+}
+
+.card2 {
+  grid-row: 45/span 35;
+  grid-column: 3/span 2;
+
+}
+
+.card3 {
+  grid-row: 45/span 35;
+  grid-column: 5/span 2;
+
+}
+
+.card4 {
+  grid-row: 45/span 35;
+  grid-column: 7/span 2;
+
+}
+
+.card5 {
+  grid-row: 45/span 35;
+  grid-column: 9/span 2;
+
+}

@@ -10,6 +10,26 @@
     opacity: 0.98;
     background: $primary-color;
     z-index: 1000;
+    overflow: hidden;
+    transition: ease-in 0.1s;
+}
+
+.header[color='white'],
+.header[color='white']>*,
+.header[color='white']>div>nav,
+.header[color='white']>div>nav>ul,
+.header[color='white']>div>nav>ul>a {
+    background-color: $secondary-color;
+}
+
+.header[color='white']>div>a>p {
+    color: $primary-color;
+}
+
+.header>div>nav,
+.header>div>nav>ul {
+    transition: ease-in 0.1s;
+
 }
 
 .secondaryNavContainer {
@@ -17,13 +37,21 @@
     display: flex;
     justify-content: space-between;
     width: 90%;
+    transition: ease-in 0.1s;
 }
 
 .logoLink {
     margin-top: 10px;
     height: 50px;
     width: 128px;
+    background-color: transparent;
+    transition: ease-in 0.1s;
     @include nav-font;
+}
+
+.logoLink>p {
+    background-color: transparent;
+    transition: ease-in 0.1s;
 }
 
 .logo {
@@ -34,10 +62,17 @@
     @include nav-font;
     @include navbtn;
     list-style: none;
+    transition: ease-in 0.1s;
+}
+
+.listElement[color="white"] {
+    @include nav-font-white;
+    @include navbtn-white;
 }
 
 .a {
     text-decoration: none;
+    border-radius: 1.5em;
 }
 
 
@@ -148,6 +183,7 @@
 
     .nav2 {
         width: auto;
+
     }
 
     .nav2>ul {
@@ -156,6 +192,8 @@
         justify-content: flex-start;
         padding-left: 2em;
         gap: 2em;
+        margin-top: 10px;
+
     }
 
 }

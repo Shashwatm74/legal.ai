@@ -1,9 +1,49 @@
+@mixin section {
+    height: max(700px, 100vh);
+    // display: flex;
+    justify-content: center;
+    scroll-margin-top: 3.6em;
+    overflow: hidden;
+}
+
+@mixin sectionWrapper {
+    @media (max-width: 600px) {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(200, 8px);
+        width: 100%;
+    }
+
+    @media (min-width: 600px) {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(200, 8px);
+        width: 100%;
+    }
+
+    @media (min-width: 992px) {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(200, 8px);
+        width: 100%;
+    }
+}
+
 //NAV
 @mixin nav-font {
     text-decoration: none;
     font-family: $primary-font;
     font-weight: 600;
     color: $secondary-color;
+    user-select: none;
+    font-size: 1.5em;
+}
+
+@mixin nav-font-white {
+    text-decoration: none;
+    font-family: $primary-font;
+    font-weight: 600;
+    color: $primary-color;
     user-select: none;
     font-size: 1.5em;
 }
@@ -79,27 +119,41 @@
     }
 }
 
-//
+@mixin navbtn-white {
+    font-family: $secondary-color;
+    font-size: 0.75rem;
+    background: none;
+    border: 0.175em solid $primary-color;
+    padding: 0.7em 2.3em;
+    color: $primary-color;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    border-radius: 1.5em;
+    cursor: pointer;
 
-@mixin sectionWrapper {
-    @media (max-width: 600px) {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(200, 8px);
-        width: 70%;
+    &:focus {
+        outline: none;
     }
 
-    @media (min-width: 600px) {
-        display: grid;
-        grid-template-columns: repeat(8, 1fr);
-        grid-template-rows: repeat(200, 8px);
-        width: 70%;
+    border-color: $primary-color;
+    color: $primary-color;
+
+    background: {
+        image: linear-gradient(45deg, transparent 50%, $primary-color 50%);
+        position: 25%;
+        size: 400%;
     }
 
-    @media (min-width: 992px) {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: repeat(200, 8px);
-        width: 70%;
+    transition: background 500ms ease-in-out,
+    color 500ms ease-in-out;
+
+    &:hover {
+        color: $secondary-color;
+
+        background: {
+            position: 100%;
+        }
     }
 }
+
+//

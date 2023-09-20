@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import styles from '@/styles/components/Nav.module.scss';
+import styles from '@/styles/components/nav.module.scss';
 import navtoggle from '@/components/navtoggle.js';
 import Image from 'next/image';
 import menuImage from '@/assets/images/menu.png';
@@ -12,24 +12,24 @@ const Nav = () => {
     return (
         <>
 
-            <header className={styles.header}>
+            <header className={styles.header} id="header">
                 <div className={styles.secondaryNavContainer}>
 
 
                     <Link className={styles.logoLink} href="/" replace >
-                        <p className={styles.logo}>Legal.ai</p>
+                        <p className={styles.logo} id="navLogo">Legal.ai</p>
                     </Link>
 
 
                     <nav className={styles.nav2} id='SecondaryNav' data-visible="false">
                         <ul >
                             <Link className={styles.a} href="/home/registrations" replace onClick={() => { document.getElementById("SecondaryNav").setAttribute("data-visible", "false"); document.getElementById("NavToggle2").setAttribute("data-visible", "false"); }} >
-                                <li className={styles.listElement}>
+                                <li id="listele1" className={styles.listElement}>
                                     Sign up
                                 </li>
                             </Link>
                             <a className={styles.a} href="/#contact" replace onClick={() => { document.getElementById("SecondaryNav").setAttribute("data-visible", "false"); document.getElementById("NavToggle2").setAttribute("data-visible", "false"); }} >
-                                <li className={styles.listElement}>
+                                <li id="listele2" className={styles.listElement}>
                                     Login
                                 </li>
                             </a>
