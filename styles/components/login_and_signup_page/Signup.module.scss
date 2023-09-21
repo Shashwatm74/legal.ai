@@ -1,0 +1,89 @@
+@import "@/styles/abstract/mixin";
+@import "@/styles/abstract/variable";
+
+.signup {
+  @include section;
+}
+
+.signup_container {
+  @include sectionWrapper;
+}
+
+.signup_card_wrapper {
+  grid-column: 1/4;
+  grid-row: 20;
+  display: flex;
+  flex-direction: column;
+  width: max(400px, 65%);
+  height: max(500px, 63%);
+  margin-left: 100px;
+  background-color: $primary-color;
+  border-radius: 10px;
+  color: $secondary-color;
+  font-family: $primary-font;
+}
+
+.span_heading {
+  font-size: 2.5em;
+  font-family: $primary-font;
+}
+
+.input_box,
+.signup_ele_head {
+  margin-left: 10px;
+  font-size: 1em;
+  border: none;
+  height: 2em;
+}
+
+.signup_ele_head {
+  margin-top: 30px;
+}
+
+.input_box::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: $secondary-color;
+}
+
+.signup_text,
+.additional_options {
+  place-self: center;
+  font-size: 0.8em;
+}
+
+.submit_button {
+  @include navbtn;
+  margin-top: 3.5em;
+  margin-bottom: 3.5em;
+}
+
+.google_button {
+  @include navbtn;
+  margin-left: 20px;
+}
+
+.signup_link>a {
+  color: $secondary-color;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.signup_text {
+  margin-bottom: 10px;
+}
+
+.additional_options {
+  height: 3.1em;
+}
+
+.signupImage {
+  grid-row: 10/span 70;
+  grid-column: 6/ span 7;
+  transform: translate(100px, 0);
+
+}

@@ -23,12 +23,12 @@ const Nav = () => {
 
                     <nav className={styles.nav2} id='SecondaryNav' data-visible="false">
                         <ul >
-                            <Link className={styles.a} href="/home/registrations" replace onClick={() => { document.getElementById("SecondaryNav").setAttribute("data-visible", "false"); document.getElementById("NavToggle2").setAttribute("data-visible", "false"); }} >
+                            <Link className={styles.a} href="/signup" replace onClick={() => { document.getElementById("SecondaryNav").setAttribute("data-visible", "false"); document.getElementById("NavToggle2").setAttribute("data-visible", "false"); }} >
                                 <li id="listele1" className={styles.listElement}>
                                     Sign up
                                 </li>
                             </Link>
-                            <a className={styles.a} href="/#contact" replace onClick={() => { document.getElementById("SecondaryNav").setAttribute("data-visible", "false"); document.getElementById("NavToggle2").setAttribute("data-visible", "false"); }} >
+                            <a className={styles.a} href="/login" replace onClick={() => { document.getElementById("SecondaryNav").setAttribute("data-visible", "false"); document.getElementById("NavToggle2").setAttribute("data-visible", "false"); }} >
                                 <li id="listele2" className={styles.listElement}>
                                     Login
                                 </li>

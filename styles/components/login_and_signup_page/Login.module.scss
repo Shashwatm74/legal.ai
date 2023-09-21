@@ -1,0 +1,10 @@
+@import "@/styles/abstract/mixin";
+@import "@/styles/abstract/variable";
+
+.login {
+  @include section;
+}
+
+.login_container {
+  @include sectionWrapper;
+}
