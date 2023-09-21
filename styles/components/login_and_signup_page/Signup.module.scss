@@ -34,6 +34,11 @@
   font-size: 1em;
   border: none;
   height: 2em;
+  color: $secondary-color;
+}
+
+.input_box {
+  border-bottom: 2px solid $secondary-color;
 }
 
 .signup_ele_head {
@@ -48,6 +53,11 @@
   width: 100%;
   height: 2px;
   background-color: $secondary-color;
+
+}
+
+.input_box:focus {
+  outline: none;
 }
 
 .signup_text,

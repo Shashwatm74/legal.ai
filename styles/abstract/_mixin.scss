@@ -156,4 +156,29 @@
     }
 }
 
-//
+//dashboard
+
+
+@mixin dashboard_cards {
+    border-radius: 8px;
+    position: relative;
+    background-color: $primary-color;
+}
+
+@mixin dashboard_section_wrapper {
+    margin-bottom: 15px;
+    margin-top: 32px;
+    height: 92vh;
+
+    @media(min-width:300px) {
+        width: 92%;
+        margin-left: 47px;
+        margin-top: 70px;
+        margin-right: 5px;
+    }
+
+    @media (min-width:1300px)and (min-height:413px) {
+        margin-left: 320px;
+    }
+
+}

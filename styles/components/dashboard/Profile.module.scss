@@ -1,0 +1,172 @@
+@import "@/styles/abstract/mixin";
+@import "@/styles/abstract/variable";
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text&display=swap");
+
+.profile {
+    @include section;
+    z-index: 1;
+    background-color: $dashboard-bg-color;
+
+    @media (min-width: 600px) {
+        height: max(700px, 140vh);
+    }
+
+    @media (max-width: 600px) {
+        height: max(700px, 140vh);
+    }
+
+    @media(min-width: 992px) {
+        margin-left: 370px;
+        height: max(750px, 100vh);
+    }
+
+}
+
+.sectionWrapper {
+    @include sectionWrapper;
+    height: 95vh;
+    margin-bottom: 32px;
+
+    @media(min-width:300px) {
+        width: 92%;
+        margin-left: 42px;
+        margin-top: 60px;
+    }
+}
+
+.profileCard {
+    grid-row: 3 / span 81;
+    grid-column: 1 / span 12;
+    background-color: $primary-color;
+    border-radius: 8px;
+    padding: 4em 4em 4em 2em;
+    position: relative;
+    font-style: $heading-font;
+}
+
+.headCard {
+    display: grid;
+    border-radius: 8px;
+    margin-top: -7.5%;
+    margin-left: 12%;
+    height: 15%;
+    width: 50%;
+}
+
+.nameHead {
+    border-radius: 8px;
+    font-size: x-large;
+    font: $heading-font;
+}
+
+.emailHead {
+    border-radius: 8px;
+    color: rgb(137, 137, 137);
+    font-size: medium;
+}
+
+.photo {
+    height: 50px;
+    width: 50px;
+    padding: 1em;
+    border-radius: 50px;
+    margin-top: 4%;
+    text-align: center;
+    border: solid 1px rgb(193, 193, 193);
+}
+
+.detailsBox {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: auto;
+    width: 100%;
+    margin-top: 4%;
+    padding-top: 1em;
+    padding-bottom: 3em;
+    border: solid 1px rgb(193, 193, 193);
+    border-radius: 8px;
+}
+
+.boxSet {
+    height: 40px;
+    width: 75%;
+    margin-top: 4%;
+    margin-left: 2em;
+}
+
+.usernameBox {
+    height: 20px;
+    width: 75%;
+    padding: 0.5em;
+    margin: 1.5em 1.5em 1.5em 2.5em;
+    border: solid 1px rgb(193, 193, 193);
+    border-radius: 8px;
+}
+
+.nameBox {
+    height: 20px;
+    width: 75%;
+    padding: 0.5em;
+    margin: 1.5em 1.5em 1.5em 2.5em;
+    border: solid 1px rgb(193, 193, 193);
+    border-radius: 8px;
+}
+
+.emailBox {
+    height: 20px;
+    width: 75%;
+    padding: 0.5em;
+    margin: 1.5em 1.5em 1.5em 2.5em;
+    border: solid 1px rgb(193, 193, 193);
+    border-radius: 8px;
+}
+
+.addressBox {
+    height: 20px;
+    width: 75%;
+    padding: 0.5em;
+    margin: 1.5em 1.5em 1.5em 2.5em;
+    border: solid 1px rgb(193, 193, 193);
+    border-radius: 8px;
+}
+
+.cityBox {
+    height: 20px;
+    width: 75%;
+    padding: 0.5em;
+    margin: 1.5em 1.5em 1.5em 2.5em;
+    border: solid 1px rgb(193, 193, 193);
+    border-radius: 8px;
+}
+
+.pinBox {
+    height: 20px;
+    width: 75%;
+    padding: 0.5em;
+    margin: 1.5em 1.5em 1.5em 2.5em;
+    border: solid 1px rgb(193, 193, 193);
+    border-radius: 8px;
+}
+
+.buttonBox {
+    height: 39px;
+    width: 85%;
+    padding: 0.5em;
+    margin: 4em 1.5em 1.5em 2.5em;
+    border-radius: 8px;
+    display:grid;
+    grid-row: 3;
+    grid-column: 2;
+    grid-template-columns: 50% 50% ;
+    column-gap: 5px;
+}
+
+.saveButton {
+    grid-column: 1;
+    width: min-content;
+}
+
+.backButton{
+    grid-column: 2;
+}
+

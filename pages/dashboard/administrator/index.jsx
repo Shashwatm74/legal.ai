@@ -3,7 +3,6 @@
 import React from "react";
 import styles from "@/styles/components/dashboard/Dashboard.module.scss";
 import { Button } from "@geist-ui/react";
-import CountdownTimer from "@/components/timer/timer";
 import Link from "next/link";
 
 
@@ -31,9 +30,7 @@ export default function Dashboard() {
                     </div>
 
                     <div className={styles.meetCard}>
-                        <div className={styles.meetWindow}>
-                            <CountdownTimer targetDate={dateTimeTarget} />
-                        </div>
+
                         <div className={styles.meetJoin}>
                             <p>
                                 The the join meet button will be enabled once the host starts the meeting

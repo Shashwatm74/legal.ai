@@ -1,0 +1,46 @@
+@import "@/styles/abstract/mixin";
+@import "@/styles/abstract/variable";
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text&display=swap");
+
+
+
+.results {
+    background-color: $dashboard-bg-color;
+    display: flex;
+    justify-content: center;
+    scroll-margin-top: 3.6em;
+    height: fit-content;
+}
+
+.sectionWrapper {
+    @include dashboard_section_wrapper;
+}
+
+.resultsCard {
+    grid-row: 3 / span 81;
+    grid-column: 1 / span 12;
+    position: relative;
+    background-color: $primary-color;
+    border-radius: 8px;
+    padding: 4em 4em 4em 2em;
+}
+
+
+.addResultButton {
+    border-style: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 3em;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.resultTab {
+    height: auto;
+    width: 100%;
+    padding: 1em;
+    border: solid 1px rgb(193, 193, 193);
+    border-radius: 8px;
+}

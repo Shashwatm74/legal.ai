@@ -1,0 +1,52 @@
+@import "@/styles/abstract/mixin";
+@import "@/styles/abstract/variable";
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text&display=swap");
+
+
+
+.privacyPolicy {
+    background-color: $dashboard-bg-color;
+    display: flex;
+    justify-content: center;
+    scroll-margin-top: 3.6em;
+    height: fit-content;
+}
+
+.sectionWrapper {
+    margin-bottom: 15px;
+    margin-top: 32px;
+
+    @media(min-width:300px) {
+        width: 92%;
+        margin-left: 47px;
+        margin-top: 70px;
+        margin-right: 5px;
+    }
+
+    @media (min-width:1300px)and (min-height:500px) {
+        margin-left: 320px;
+    }
+}
+
+.privacyCard {
+    grid-row: 3 / span 94;
+    grid-column: 1 / span 12;
+    position: relative;
+    background-color: $primary-color;
+    border-radius: 8px;
+    padding: 2em;
+    padding-top: 0.5em;
+    height: auto;
+
+}
+
+.editPrivacyButton {
+    border-style: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 2em;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
