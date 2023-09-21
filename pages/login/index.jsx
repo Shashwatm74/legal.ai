@@ -59,7 +59,7 @@ function login() {
                         <div className={styles.login_text}>
                             Don't have an account?
                             <span className={styles.login_link}>
-                                <a href="/login/"> Sign up</a>
+                                <a href="/signup/"> Sign up</a>
                             </span>
                         </div>
                         <div className={styles.additional_options}>
