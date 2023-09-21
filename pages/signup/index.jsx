@@ -5,7 +5,7 @@ import Head from "next/head";
 import logo from "@/assets/images/logo.png";
 import Image from "next/image";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../firebaseConfig"; 
+import { auth } from "../firebaseConfig";
 // const auth = useAuth()
 //<button onClick = {(e) => auth.signinwithGoogle()}>SingIN</button>
 function SignUp() {
@@ -103,7 +103,7 @@ function SignUp() {
               </span>
             </div>
             <div className={styles.additional_options}>
-              Sign up with{" "}
+              Sign up with
               <button className={styles.google_button}>google</button>
             </div>
           </div>
