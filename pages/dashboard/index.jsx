@@ -16,10 +16,7 @@ export default function Dashboard() {
                         profile section
                         <button className={styles.editButton}>Edit</button>
                     </div>
-                    <div className={styles.meetCard}>
-                        <div className={styles.meetWindow}></div>
-                    </div>
-                    {/* <div className={styles.registrationCard}></div> */}
+
                 </div>
             </section>
         </>

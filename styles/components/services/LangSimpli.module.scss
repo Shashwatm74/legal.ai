@@ -1,0 +1,57 @@
+@import "@/styles/abstract/mixin";
+@import "@/styles/abstract/variable";
+
+.section {
+    @include section;
+}
+
+.sectionWrapper {
+    @include sectionWrapper;
+}
+
+.heading {
+    grid-row: 8 /span 12;
+    grid-column: 1/span 12;
+    color: $secondary-color;
+    font-size: 2.5em;
+    font-family: $primary-font;
+    padding-left: 2.6em;
+    padding-top: 0.6em;
+}
+
+.input_box {
+    grid-row: 37/span 42;
+    grid-column: 2/span 4;
+    color: $primary-color;
+    border: none;
+    border-radius: 5px;
+    background-color: $secondary-color;
+    padding-left: 5em;
+}
+
+.result_box {
+    grid-row: 37/span 42;
+    grid-column: 8/span 4;
+    color: rgb(151, 151, 151);
+    border-radius: 5px;
+    background-color: $secondary-color;
+    padding-left: 5em;
+    padding-top: 9em;
+}
+
+.subheading1 {
+    grid-row: 23/span 12;
+    grid-column: 2/span 4;
+    color: $secondary-color;
+    font-family: $primary-font;
+    font-size: 2em;
+
+}
+
+.subheading2 {
+    grid-row: 23/span 12;
+    grid-column: 8/span 4;
+    color: $secondary-color;
+    font-family: $primary-font;
+    font-size: 2em;
+}

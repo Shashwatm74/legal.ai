@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from "react";
 import styles from "@/styles/components/aboutpage/About.module.scss";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { gsap } from "gsap";
-
+import Link from "next/link";
 gsap.registerPlugin(ScrollTrigger);
 
 function About() {
@@ -190,35 +190,38 @@ function About() {
 
           </div>
           {/* /////////////////////////////////////////// */}
-
-          <div ref={card1Ref} className={styles.card1}>
-            Document Generator
-          </div>
-
-          {/* /////////////////////////////////////////// */}
-
-          <div ref={card2Ref} className={styles.card2}>
-            Language Simplification
-          </div>
+          <Link className={styles.card1} href="/document_generator" replace>
+            <div ref={card1Ref} className={styles.card1}>
+              Document Generator
+            </div>
+          </Link>
 
           {/* /////////////////////////////////////////// */}
-
-          <div ref={card3Ref} className={styles.card3}>
-            Document Customization
-          </div>
+          <Link className={styles.card2} href="/language_simplification" replace>
+            <div ref={card2Ref} className={styles.card2}>
+              Language Simplification
+            </div>
+          </Link>
+          {/* /////////////////////////////////////////// */}
+          <Link className={styles.card3} href="/document_customization" replace>
+            <div ref={card3Ref} className={styles.card3}>
+              Document Customization
+            </div>
+          </Link>
 
           {/* /////////////////////////////////////////// */}
-
-          <div ref={card4Ref} className={styles.card4}>
-            Legal Advice
-          </div>
-
+          <Link className={styles.card4} href="/legal_advice" replace>
+            <div ref={card4Ref} className={styles.card4}>
+              Legal Advice
+            </div>
+          </Link>
           {/* /////////////////////////////////////////// */}
 
-
-          <div ref={card5Ref} className={styles.card5}>
-            Document Review
-          </div>
+          <Link className={styles.card5} href="/document_review" replace>
+            <div ref={card5Ref} className={styles.card5}>
+              Document Review
+            </div>
+          </Link>
           {/* /////////////////////////////////////////// */}
 
         </div>
