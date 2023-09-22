@@ -93,14 +93,23 @@ function SignUp() {
               value={password}
               onChange={handlePasswordChange}
             />
+            {/* ........................................... */}
+
+            <div className={styles.messages} id="message"></div>
+
+
+            {/* ............................................. */}
             <form
+              className={styles.form}
               onSubmit={(e) => {
                 e.preventDefault();
                 handleSignUp();
               }}
             >
-              <div className={styles.message} id="message"></div>
-              {/* ... */}
+
+
+
+
               <button className={styles.submit_button} type="submit">
                 Submit
               </button>

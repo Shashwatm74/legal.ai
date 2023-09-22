@@ -5,7 +5,7 @@ import styles from '@/styles/components/nav.module.scss';
 import navtoggle from '@/components/navtoggle.js';
 import Image from 'next/image';
 import menuImage from '@/assets/images/menu.png';
-
+import pfp from '@/assets/images/defaultPfp.png';
 
 
 const Nav = () => {
@@ -38,7 +38,7 @@ const Nav = () => {
                     </nav>
                 </div>
 
-                {/* <nav className={styles.nav} id='PrimaryNav' data-visible="false">
+                <nav className={styles.nav} id='PrimaryNav' data-visible="false">
                     <ul>
                         <Link className={styles.a} href="/login" replace onClick={() => { document.getElementById("PrimaryNav").setAttribute("data-visible", "false"); document.getElementById("NavToggle").setAttribute("data-visible", "false"); }}>
                             <li className={styles.listElement}>
@@ -52,18 +52,18 @@ const Nav = () => {
                         </Link>
 
                     </ul>
-                </nav> */}
-                <button className={styles.navToggle2} id='NavToggle2' data-visible="false">
+                </nav>
+                {/* <button className={styles.navToggle2} id='NavToggle2' data-visible="false">
                     <div className={styles.menu}>
                         <Image id='menu' alt="menu" className={styles.menuImage} src={menuImage} />
                     </div>
-                </button>
+                </button> */}
 
-                {/* <button className={styles.navToggle} id='NavToggle' data-visible="false">
+                <button className={styles.navToggle} id='NavToggle' data-visible="false" login='false'>
                     <div className={styles.profilePic}>
                         <Image id='pfp' alt="profile picture" className={styles.pfp} src={pfp} />
                     </div>
-                </button> */}
+                </button>
 
 
             </header >

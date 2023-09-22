@@ -12,26 +12,26 @@ if (typeof window === 'object') {
     {
         //to set the data visible to none if not clicked on the menu or profile
         document?.addEventListener('click', (event) => {
-            if ((event.target !== menu)) {
-                if (event.target !== SecondaryNav) {
-                    SecondaryNav.setAttribute("data-visible", "false");
-                    navToggle2.setAttribute("data-visible", "false");
-                }
-            }
-            // if ((event.target !== pfp)) {
-            //     if (event.target !== primaryNav) {
-
-            //         primaryNav.setAttribute("data-visible", "false");
-            //         navToggle.setAttribute("data-visible", "false");
+            // if ((event.target !== menu)) {
+            //     if (event.target !== SecondaryNav) {
+            //         SecondaryNav.setAttribute("data-visible", "false");
+            //         navToggle2.setAttribute("data-visible", "false");
             //     }
             // }
+            if ((event.target !== pfp)) {
+                if (event.target !== primaryNav) {
+
+                    primaryNav.setAttribute("data-visible", "false");
+                    navToggle.setAttribute("data-visible", "false");
+                }
+            }
 
         });
 
         // Toggle primary  nav
         navToggle?.addEventListener("click", () => {
-            // const visibilityProfile = primaryNav.getAttribute("data-visible");
-            const visibilityMenu = SecondaryNav.getAttribute("data-visible");
+            const visibilityProfile = primaryNav.getAttribute("data-visible");
+            // const visibilityMenu = SecondaryNav.getAttribute("data-visible");
             if ((visibilityProfile === "false") && (visibilityMenu === "false")) {
                 primaryNav.setAttribute("data-visible", "true");
                 navToggle.setAttribute("data-visible", "true");

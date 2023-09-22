@@ -70,6 +70,10 @@
     @include navbtn-white;
 }
 
+.listElement[login="true"] {
+    display: none;
+}
+
 .a {
     text-decoration: none;
     border-radius: 1.5em;

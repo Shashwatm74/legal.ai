@@ -29,7 +29,8 @@ function login() {
         setTimeout(() => {
           router.push('/');
         }, 1000);
-        document.getElementById("listElement").setAttribute("login", "true");
+        document.getElementById("listele1").setAttribute("login", "true");
+        document.getElementById("listele2").setAttribute("login", "true");
       }).catch((error) => {
         document.getElementById("message").innerHTML = error.message;
       })
@@ -89,7 +90,14 @@ function login() {
               value={password}
               onChange={handlePasswordChange}
             />
+            {/* ........................................... */}
+
+            <div className={styles.messages} id="message"></div>
+
+
+            {/* ............................................. */}
             <form
+              className={styles.form}
               onSubmit={(e) => {
                 e.preventDefault();
                 handleSignIn();
