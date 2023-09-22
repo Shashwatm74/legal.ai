@@ -68,7 +68,8 @@
 }
 
 .select1 {
-    height: 20px;
+    border-radius: 5px;
+    height: 25px;
     grid-row: 82;
     grid-column: 2;
     background: $secondary-color;
@@ -76,7 +77,8 @@
 }
 
 .select2 {
-    height: 20px;
+    border-radius: 5px;
+    height: 25px;
     grid-row: 82;
     grid-column: 8;
     background: $secondary-color;
