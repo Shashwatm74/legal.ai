@@ -108,7 +108,11 @@ const countries = {
 
 function langsimpli() {
     if (typeof window === 'object') {
-        const translateBtn = document.getElementById("transalateBtn");
+        const fromText = document?.querySelector(".input_box"),
+            toText = document?.querySelector(".result_box"),
+            selectTag = document?.querySelectorAll("select"),
+            translateBtn = document?.getElementById("transalateBtn");
+
         useEffect(() => {
             // Logic to populate the select options here
             const selectTag = document?.querySelectorAll("select");
