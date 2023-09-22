@@ -9,6 +9,7 @@ import aboutimg1 from "@/assets/images/aboutimg1.jpeg";
 import aboutimg2 from "@/assets/images/aboutimg2.jpeg";
 import aboutimg3 from "@/assets/images/aboutimg3.jpeg";
 import aboutimg4 from "@/assets/images/aboutimg4.jpeg";
+
 gsap.registerPlugin(ScrollTrigger);
 
 function About() {
@@ -20,6 +21,7 @@ function About() {
   const card3Ref = useRef(null);
   const card4Ref = useRef(null);
   const card5Ref = useRef(null);
+
 
 
   useEffect(() => {

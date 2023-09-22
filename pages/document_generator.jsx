@@ -44,7 +44,7 @@ function docgen() {
           <div className={styles.heading}>Document Generation</div>
 
           <div className={styles.subheading1}>Original Text</div>
-          <input
+          <textarea
             className={styles.input_box}
             placeholder="Enter your text..."
             required
@@ -54,7 +54,7 @@ function docgen() {
           />
           <div className={styles.subheading2}>Generated Document</div>
 
-          <div className={styles.result_box}>{simplifiedText}</div>
+          <div className={styles.result_box}>{simplifiedText} simplified text here...</div>
 
           <button className={styles.submitbtn} onClick={generateText}>
             GENERATE
