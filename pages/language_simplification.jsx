@@ -13,14 +13,14 @@ function langsimpli() {
         setInputText(event.target.value);
     };
     const summarizeText = async () => {
-        try {
-            const response = await fetch("/summarize", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/x-www-form-urlencoded",
-                },
-                body: `input_text=${encodeURIComponent(inputText)}`,
-            });
+      try {
+        const response = await fetch("http://localhost:5000/summarize", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: `input_text=${encodeURIComponent(inputText)}`,
+        });
 
 
             if (response.ok) {
@@ -41,27 +41,28 @@ function langsimpli() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <section className={styles.section}>
-                <div className={styles.sectionWrapper}>
-                    <div className={styles.heading}>Language Simplification</div>
-                    <div className={styles.result_box}>
-                        See your simplified text here...
-                    </div>
-                    <button className={styles.submitbtn}>SUBMIT</button>
-                    <div className={styles.subheading1}>Original Text</div>
-                    <textarea
-                        className={styles.input_box}
-                        placeholder="Enter your text..."
-                        required
-                        type="text"
-                        value={inputText}
-                        onChange={handleInputChange}
-                    />
-                    <div className={styles.subheading2}>Simplified Text</div>
-                    <div className={styles.result_box}>{simplifiedText}</div>
-                </div>
-            </section>
-        </>
+        <section className={styles.section}>
+          <div className={styles.sectionWrapper}>
+            <div className={styles.heading}>Language Simplification</div>
+
+            <div className={styles.subheading1}>Original Text</div>
+            <input
+              className={styles.input_box}
+              placeholder="Enter your text..."
+              required
+              type="text"
+              value={inputText}
+              onChange={handleInputChange}
+            />
+            <div className={styles.subheading2}>Simplified Text</div>
+
+            <div className={styles.result_box}>{simplifiedText}</div>
+            <button className={styles.submitbtn} onClick={summarizeText}>
+              SUBMIT
+            </button>
+          </div>
+        </section>
+      </>
     );
 }
 
