@@ -4,13 +4,11 @@
 
 * {
     margin: 0;
+    background: $primary-color;
+
 
 }
 
 html {
     overflow-x: hidden;
-}
-
-body {
-    background: $primary-color;
 }
