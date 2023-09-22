@@ -111,11 +111,14 @@ function langsimpli() {
         const fromText = document?.querySelector(".input_box"),
             toText = document?.querySelector(".result_box"),
             selectTag = document?.querySelectorAll("select"),
-            translateBtn = document?.getElementById("transalateBtn");
+            translateBtn = document?.querySelector(".submitbtn");
 
         useEffect(() => {
             // Logic to populate the select options here
             const selectTag = document?.querySelectorAll("select");
+            selectTag.forEach(tag => {
+                console.log(tag);
+            });
             selectTag?.forEach((tag, id) => {
                 for (let country_code in countries) {
                     let selected = id == 0 ? country_code == "en-GB" ? "selected" : "" : country_code == "hi-IN" ? "selected" : "";
@@ -126,8 +129,9 @@ function langsimpli() {
         }, []);
         translateBtn?.addEventListener("click", () => {
             let text = fromText.value.trim(),
-                translateFrom = selectTag[0].value,
-                translateTo = selectTag[1].value;
+                translateFrom = selectTag[1].value,
+                translateTo = selectTag[0].value;
+            console.log(text);
             if (!text) return;
             toText?.setAttribute("placeholder", "Translating...");
             let apiUrl = `https://api.mymemory.translated.net/get?q=${text}&langpair=${translateFrom}|${translateTo}`;
