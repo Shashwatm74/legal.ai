@@ -3,7 +3,12 @@ import React, { useEffect, useRef } from "react";
 import styles from "@/styles/components/aboutpage/About.module.scss";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { gsap } from "gsap";
+import Image from "next/image";
 import Link from "next/link";
+import aboutimg1 from "@/assets/images/aboutimg1.jpeg";
+import aboutimg2 from "@/assets/images/aboutimg2.jpeg";
+import aboutimg3 from "@/assets/images/aboutimg3.jpeg";
+import aboutimg4 from "@/assets/images/aboutimg4.jpeg";
 gsap.registerPlugin(ScrollTrigger);
 
 function About() {
@@ -190,30 +195,34 @@ function About() {
 
           </div>
           {/* /////////////////////////////////////////// */}
-          <Link className={styles.card1} href="/document_generator" replace>
-            <div ref={card1Ref} className={styles.card1}>
+          <Link className={styles.linkcard1} href="/document_generator" replace>
+            <div ref={card1Ref} className={styles.card1} style={{ opacity: 1, visibility: "visible" }}>
               Document Generator
             </div>
+            <Image className={styles.aboutimg} src={aboutimg1} alt="aboutimg1" height={1000} />
           </Link>
 
           {/* /////////////////////////////////////////// */}
-          <Link className={styles.card2} href="/language_simplification" replace>
-            <div ref={card2Ref} className={styles.card2}>
+          <Link className={styles.linkcard2} href="/language_simplification" replace>
+            <div ref={card2Ref} className={styles.card2} style={{ opacity: 1, visibility: "visible" }}>
               Language Simplification
             </div>
+            <Image className={styles.aboutimg} src={aboutimg2} alt="aboutimg1" height={1000} />
           </Link>
           {/* /////////////////////////////////////////// */}
-          <Link className={styles.card3} href="/document_customization" replace>
-            <div ref={card3Ref} className={styles.card3}>
+          <Link className={styles.linkcard3} href="/document_customization" replace>
+            <div ref={card3Ref} className={styles.card3} style={{ opacity: 1, visibility: "visible" }}>
               Language Translation
             </div>
+            <Image className={styles.aboutimg} src={aboutimg3} alt="aboutimg1" height={1000} />
           </Link>
 
           {/* /////////////////////////////////////////// */}
-          <Link className={styles.card4} href="/legal_advice" replace>
-            <div ref={card4Ref} className={styles.card4}>
+          <Link className={styles.linkcard4} href="/legal_advice" replace>
+            <div ref={card4Ref} className={styles.card4} style={{ opacity: 1, visibility: "visible" }}>
               Legal Advice
             </div>
+            <Image className={styles.aboutimg} src={aboutimg4} alt="aboutimg1" height={1000} />
           </Link>
           {/* /////////////////////////////////////////// */}
 

@@ -39,33 +39,82 @@
 .card3,
 .card4,
 .card5 {
+  opacity: 1;
+  visibility: visible;
+  position: absolute;
+  margin-top: 250px;
   width: 13em;
-  margin-left: 50px;
+  margin-left: 0px;
   border-radius: 5px;
+  text-decoration: none;
   color: $secondary-color;
   font-family: $primary-font;
+  // background: linear-gradient(to top, black, white 100%);
 }
 
 .card1 {
   grid-row: 45/span 35;
-  grid-column: 1/span 2;
-
+  grid-column: 2/span 2;
 }
 
 .card2 {
   grid-row: 45/span 35;
-  grid-column: 4/span 2;
+  grid-column: 5/span 2;
 
 }
 
 .card3 {
   grid-row: 45/span 35;
-  grid-column: 7/span 2;
+  grid-column: 8/span 2;
+  visibility: visible;
+  opacity: 1;
 
 }
 
 .card4 {
   grid-row: 45/span 35;
-  grid-column: 10/span 2;
+  grid-column: 11/span 2;
 
+}
+
+.linkcard1,
+.linkcard2,
+.linkcard3,
+.linkcard4,
+.linkcard5 {
+  width: 13em;
+  margin-left: 0px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: $secondary-color;
+  font-family: $primary-font;
+  background: linear-gradient(to top, black, white 100%);
+}
+
+.linkcard1 {
+  grid-row: 45/span 35;
+  grid-column: 2/span 2;
+}
+
+.linkcard2 {
+  grid-row: 45/span 35;
+  grid-column: 5/span 2;
+
+}
+
+.linkcard3 {
+  grid-row: 45/span 35;
+  grid-column: 8/span 2;
+
+}
+
+.linkcard4 {
+  grid-row: 45/span 35;
+  grid-column: 11/span 2;
+
+}
+
+.aboutimg {
+  height: 13em;
+  width: 13em;
 }
