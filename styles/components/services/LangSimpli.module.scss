@@ -28,8 +28,11 @@
     border: none;
     border-radius: 5px;
     background-color: $secondary-color;
-    padding-left: 5em;
+    padding: 2em;
+}
 
+.input_box:focus {
+    outline: none;
 }
 
 .result_box {
@@ -38,8 +41,8 @@
     color: rgb(151, 151, 151);
     border-radius: 5px;
     background-color: $secondary-color;
-    padding-left: 5em;
-    padding-top: 9em;
+    padding: 2em;
+    overflow-y: scroll;
 }
 
 .subheading1 {

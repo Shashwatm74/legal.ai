@@ -41,8 +41,6 @@ function langsimpli() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-
-
             <section className={styles.section}>
                 <div className={styles.sectionWrapper}>
                     <div className={styles.heading}>Language Simplification</div>
@@ -50,9 +48,8 @@ function langsimpli() {
                         See your simplified text here...
                     </div>
                     <button className={styles.submitbtn}>SUBMIT</button>
-
                     <div className={styles.subheading1}>Original Text</div>
-                    <input
+                    <textarea
                         className={styles.input_box}
                         placeholder="Enter your text..."
                         required
