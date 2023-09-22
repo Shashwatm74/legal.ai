@@ -28,11 +28,11 @@ const Nav = () => {
                                     Sign up
                                 </li>
                             </Link>
-                            <a className={styles.a} href="/login" replace onClick={() => { document.getElementById("SecondaryNav").setAttribute("data-visible", "false"); document.getElementById("NavToggle2").setAttribute("data-visible", "false"); }} >
+                            <Link className={styles.a} href="/login" replace onClick={() => { document.getElementById("SecondaryNav").setAttribute("data-visible", "false"); document.getElementById("NavToggle2").setAttribute("data-visible", "false"); }} >
                                 <li id="listele2" className={styles.listElement}>
                                     Login
                                 </li>
-                            </a>
+                            </Link>
                         </ul>
 
                     </nav>

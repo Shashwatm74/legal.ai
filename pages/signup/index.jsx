@@ -6,9 +6,13 @@ import logo from "@/assets/images/logo.png";
 import Image from "next/image";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebaseConfig";
+import Link from "next/link";
+import { Redirect } from "next";
+import { useRouter } from 'next/router';
 // const auth = useAuth()
 //<button onClick = {(e) => auth.signinwithGoogle()}>SingIN</button>
 function SignUp() {
+  const router = useRouter();
   const [email, setEmail] = useState("");
 
   const handleEmailChange = (event) => {
@@ -23,12 +27,16 @@ function SignUp() {
 
   const handleSignUp = (e) => {
     //e.preventDefault();
+
     createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        console.log(userCredential);
+      .then(() => {
+        document.getElementById("message").innerHTML = "Registration successful ,redirecting to Login...";
+        setTimeout(() => {
+          router.push('/login');
+        }, 1000);
       })
       .catch((error) => {
-        console.log(error);
+        document.getElementById("message").innerHTML = error.message;
       });
   };
   return (
@@ -91,6 +99,7 @@ function SignUp() {
                 handleSignUp();
               }}
             >
+              <div className={styles.message} id="message"></div>
               {/* ... */}
               <button className={styles.submit_button} type="submit">
                 Submit
@@ -99,7 +108,7 @@ function SignUp() {
             <div className={styles.signup_text}>
               Already have an account?
               <span className={styles.signup_link}>
-                <a href="/login/"> Login</a>
+                <Link href="/login/"> Login</Link>
               </span>
             </div>
             <div className={styles.additional_options}>
