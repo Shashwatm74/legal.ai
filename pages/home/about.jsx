@@ -195,31 +195,31 @@ function About() {
 
           </div>
           {/* /////////////////////////////////////////// */}
-          <Link className={styles.linkcard1} href="/document_generator" replace>
-            <div ref={card1Ref} className={styles.card1} style={{ opacity: 1, visibility: "visible" }}>
+          <Link ref={card1Ref} className={styles.linkcard1} href="/document_generator" replace>
+            <div className={styles.card1} style={{ opacity: 1, visibility: "visible" }}>
               Document Generator
             </div>
             <Image className={styles.aboutimg} src={aboutimg1} alt="aboutimg1" height={1000} />
           </Link>
 
           {/* /////////////////////////////////////////// */}
-          <Link className={styles.linkcard2} href="/language_simplification" replace>
-            <div ref={card2Ref} className={styles.card2} style={{ opacity: 1, visibility: "visible" }}>
+          <Link ref={card2Ref} className={styles.linkcard2} href="/language_simplification" replace>
+            <div className={styles.card2} style={{ opacity: 1, visibility: "visible" }}>
               Language Simplification
             </div>
             <Image className={styles.aboutimg} src={aboutimg2} alt="aboutimg1" height={1000} />
           </Link>
           {/* /////////////////////////////////////////// */}
-          <Link className={styles.linkcard3} href="/document_customization" replace>
-            <div ref={card3Ref} className={styles.card3} style={{ opacity: 1, visibility: "visible" }}>
+          <Link ref={card3Ref} className={styles.linkcard3} href="/document_customization" replace>
+            <div className={styles.card3} style={{ opacity: 1, visibility: "visible" }}>
               Language Translation
             </div>
             <Image className={styles.aboutimg} src={aboutimg3} alt="aboutimg1" height={1000} />
           </Link>
 
           {/* /////////////////////////////////////////// */}
-          <Link className={styles.linkcard4} href="/legal_advice" replace>
-            <div ref={card4Ref} className={styles.card4} style={{ opacity: 1, visibility: "visible" }}>
+          <Link ref={card4Ref} className={styles.linkcard4} href="/legal_advice" replace>
+            <div className={styles.card4} style={{ opacity: 1, visibility: "visible" }}>
               Legal Advice
             </div>
             <Image className={styles.aboutimg} src={aboutimg4} alt="aboutimg1" height={1000} />
