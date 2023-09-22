@@ -11,7 +11,7 @@
 .sectionWrapper {
   @include sectionWrapper;
   column-gap: 1em;
-  background: url(./bg-about.jpeg), lightgray 50%;
+  background: url(./bg-about.jpeg), lightgray 50% / cover no-repeat;
 }
 
 
@@ -112,7 +112,6 @@
 .linkcard4 {
   grid-row: 45/span 35;
   grid-column: 11/span 2;
-
 }
 
 .aboutimg {
