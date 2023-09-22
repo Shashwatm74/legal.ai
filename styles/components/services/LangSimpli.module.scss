@@ -14,9 +14,11 @@
     grid-column: 1/span 12;
     color: $secondary-color;
     font-size: 2.5em;
+    font-weight: bolder;
     font-family: $primary-font;
     padding-left: 2.6em;
     padding-top: 0.6em;
+    border-bottom: 2px solid white;
 }
 
 .input_box {
@@ -27,6 +29,7 @@
     border-radius: 5px;
     background-color: $secondary-color;
     padding-left: 5em;
+
 }
 
 .result_box {
@@ -45,7 +48,6 @@
     color: $secondary-color;
     font-family: $primary-font;
     font-size: 2em;
-
 }
 
 .subheading2 {
