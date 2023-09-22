@@ -111,8 +111,8 @@ const countries = {
 function langsimpli() {
     const [fromText, setFromText] = useState("");
     const [translatedText, setTranslatedText] = useState("");
-    const [selectedToLanguage, setSelectedFromLanguage] = useState("hi-IN");
-    const [selectedFromLanguage, setSelectedToLanguage] = useState("en-GB");
+    const [selectedFromLanguage, setSelectedFromLanguage] = useState("hi-IN");
+    const [selectedToLanguage, setSelectedToLanguage] = useState("en-GB");
 
     useEffect(() => {
         // Populate select options when the component mounts
@@ -120,7 +120,7 @@ function langsimpli() {
         selectTags.forEach((tag, id) => {
             for (let country_code in countries) {
                 let selected =
-                    id === 0
+                    id === 1
                         ? country_code === selectedFromLanguage
                             ? "selected"
                             : ""
