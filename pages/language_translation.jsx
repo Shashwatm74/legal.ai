@@ -5,7 +5,7 @@ import logo from "@/assets/images/logo.png";
 import Image from "next/image";
 
 
-function langsimpli() {
+function langtrans() {
     return (
         <>
             <Head>
@@ -37,7 +37,7 @@ function langsimpli() {
                     <div className={styles.result_box}>
                         See your simplified text here...
                     </div>
-                    <button className={styles.submitbtn}>SUBMIT</button>
+
 
                 </div>
 
@@ -47,4 +47,4 @@ function langsimpli() {
     );
 }
 
-export default langsimpli;
+export default langtrans;

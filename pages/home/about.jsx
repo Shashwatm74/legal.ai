@@ -210,7 +210,7 @@ function About() {
             <Image className={styles.aboutimg} src={aboutimg2} alt="aboutimg1" height={1000} />
           </Link>
           {/* /////////////////////////////////////////// */}
-          <Link ref={card3Ref} className={styles.linkcard3} href="/document_customization" replace>
+          <Link ref={card3Ref} className={styles.linkcard3} href="/language_translation" replace>
             <div className={styles.card3} style={{ opacity: 1, visibility: "visible" }}>
               Language Translation
             </div>
