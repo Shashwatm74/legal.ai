@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "@/styles/components/services/LangSimpli.module.scss";
+import styles from "@/styles/components/services/docgen.module.scss";
 import Head from "next/head";
 
 function docgen() {
