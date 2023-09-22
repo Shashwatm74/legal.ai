@@ -111,8 +111,8 @@ const countries = {
 function langsimpli() {
     const [fromText, setFromText] = useState("");
     const [translatedText, setTranslatedText] = useState("");
-    const [selectedFromLanguage, setSelectedFromLanguage] = useState("hi-IN");
-    const [selectedToLanguage, setSelectedToLanguage] = useState("en-GB");
+    const [selectedFromLanguage, setSelectedFromLanguage] = useState("en-GB");
+    const [selectedToLanguage, setSelectedToLanguage] = useState("hi-IN");
 
     useEffect(() => {
         // Populate select options when the component mounts
