@@ -117,23 +117,23 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 ///pfp css //////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////
-// .profilePic {
-//     padding: 0;
-//     margin-left: -7px;
-//     margin-top: -4px;
-//     position: relative;
-//     width: 32px;
-//     height: 32px;
-//     overflow: hidden;
-//     border-radius: 50%;
-//     border: solid 1px gray;
-// }
+.profilePic {
+    padding: 0;
+    margin-left: -7px;
+    margin-top: -4px;
+    position: relative;
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: solid 1px gray;
+}
 
-// .pfp {
-//     width: auto;
-//     height: 100%;
-//     margin-left: -1px;
-// }
+.pfp {
+    width: auto;
+    height: 100%;
+    margin-left: -1px;
+}
 
 
 .navToggle {
@@ -156,23 +156,23 @@
 /// ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-// .nav>ul {
-//     @include profile-menu;
-//     visibility: hidden;
-// }
+.nav>ul {
+    @include profile-menu;
+    visibility: hidden;
+}
 
-// .nav[data-visible="true"]>ul {
-//     @include profile-menu;
-//     visibility: visible;
-//     margin-top: 4em;
-// }
+.nav[data-visible="true"]>ul {
+    @include profile-menu;
+    visibility: visible;
+    margin-top: 4em;
+}
 
 
 
-// .nav {
-//     padding-right: min(5%, 1rem);
-//     align-self: right;
-// }
+.nav {
+    padding-right: min(5%, 1rem);
+    align-self: right;
+}
 
 
 
@@ -242,29 +242,29 @@
 
 
 //navigation bar hover effect 
-// @media (min-width:1000px) {
+@media (min-width:1000px) {
 
-//     .nav2>ul>a:link,
-//     .nav2>ul>a:visited {
-//         color: $secondary-color;
-//         text-decoration: none;
-//         position: relative;
-//     }
+    .nav2>ul>a:link,
+    .nav2>ul>a:visited {
+        color: $secondary-color;
+        text-decoration: none;
+        position: relative;
+    }
 
-//     .nav2>ul>a::after {
-//         content: "";
-//         position: absolute;
-//         width: 100%;
-//         height: 2px;
-//         background-color: $secondary-color;
-//         bottom: -4px;
-//         left: 0;
-//         transform: scale(0);
-//         transition: 0.2s all ease-out;
-//     }
+    .nav2>ul>a::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: $secondary-color;
+        bottom: -4px;
+        left: 0;
+        transform: scale(0);
+        transition: 0.2s all ease-out;
+    }
 
-//     .nav2>ul>a:hover::after {
-//         transform: scale(1);
+    .nav2>ul>a:hover::after {
+        transform: scale(1);
 
-//     }
-// }
+    }
+}
