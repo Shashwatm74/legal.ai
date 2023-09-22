@@ -1,11 +1,36 @@
 import React from "react";
+import { useState } from "react";
 import styles from "@/styles/components/login_and_signup_page/Signup.module.scss";
 import Head from "next/head";
 import logo from "@/assets/images/logo.png";
 import Image from "next/image";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebaseConfig";
 // const auth = useAuth()
 //<button onClick = {(e) => auth.signinwithGoogle()}>SingIN</button>
 function SignUp() {
+  const [email, setEmail] = useState("");
+
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const [password, setPassword] = useState("");
+
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
+
+  const handleSignUp = (e) => {
+    //e.preventDefault();
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        console.log(userCredential);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   return (
     <>
       <Head>
@@ -42,6 +67,8 @@ function SignUp() {
               placeholder="Enter email..."
               required
               type="email"
+              value={email}
+              onChange={handleEmailChange}
             />
             {/* <div className={styles.signup_ele_head}>User Name</div>
             <input
@@ -54,8 +81,21 @@ function SignUp() {
               className={styles.input_box}
               placeholder="Enter password.."
               required
+              type="password"
+              value={password}
+              onChange={handlePasswordChange}
             />
-            <button className={styles.submit_button}>Submit</button>
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                handleSignUp();
+              }}
+            >
+              {/* ... */}
+              <button className={styles.submit_button} type="submit">
+                Submit
+              </button>
+            </form>
             <div className={styles.signup_text}>
               Already have an account?
               <span className={styles.signup_link}>
@@ -63,7 +103,8 @@ function SignUp() {
               </span>
             </div>
             <div className={styles.additional_options}>
-              Sign up with  <button className={styles.google_button}>google</button>
+              Sign up with
+              <button className={styles.google_button}>google</button>
             </div>
           </div>
           <div className={styles.signupImage}>
