@@ -13,6 +13,8 @@ if (typeof window === 'object') {
     const listele4 = document.getElementById('listele4');
     const listele5 = document.getElementById('listele5');
     const listele6 = document.getElementById('listele6');
+    const listele7 = document.getElementById('listele7');
+
 
 
     {
@@ -87,6 +89,8 @@ if (typeof window === 'object') {
             listele4?.setAttribute("color", "white");
             listele5?.setAttribute("color", "white");
             listele6?.setAttribute("color", "white");
+            listele7?.setAttribute("color", "white");
+
         }
         else {
             header?.setAttribute("color", "black");
@@ -97,6 +101,8 @@ if (typeof window === 'object') {
             listele4?.setAttribute("color", "black");
             listele5?.setAttribute("color", "black");
             listele6?.setAttribute("color", "black");
+            listele7?.setAttribute("color", "black");
+
         }
     };
 

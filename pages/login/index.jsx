@@ -35,6 +35,7 @@ function login() {
         document.getElementById("listele4").setAttribute("login", "true");
         document.getElementById("listele5").setAttribute("login", "true");
         document.getElementById("listele6").setAttribute("login", "true");
+        document.getElementById("listele7").setAttribute("login", "true");
       }).catch((error) => {
         document.getElementById("message").innerHTML = error.message;
       })

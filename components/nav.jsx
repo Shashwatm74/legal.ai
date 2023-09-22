@@ -29,6 +29,7 @@ const Nav = () => {
                                     Sign up
                                 </li>
                             </Link>
+
                             <Link className={styles.a} href="/login" replace onClick={() => { document.getElementById("SecondaryNav").setAttribute("data-visible", "false"); document.getElementById("NavToggle2")?.setAttribute("data-visible", "false"); }} >
                                 <li id="listele2" className={styles.listElement}>
                                     Login
@@ -50,9 +51,26 @@ const Nav = () => {
                                     Translate
                                 </li>
                             </Link>
+
                             <Link className={styles.a} href="/legal_advice" replace login="false" onClick={() => { document.getElementById("SecondaryNav").setAttribute("data-visible", "false"); document.getElementById("NavToggle2")?.setAttribute("data-visible", "false"); }} >
                                 <li id="listele6" className={styles.listElementonlogin}>
                                     Advice
+                                </li>
+                            </Link>
+
+                            <Link className={styles.a} href="/" replace onClick={() => {
+                                document.getElementById("SecondaryNav").setAttribute("data-visible", "false");
+                                document.getElementById("NavToggle2")?.setAttribute("data-visible", "false");
+                                document.getElementById("listele1").setAttribute("login", "false");
+                                document.getElementById("listele2").setAttribute("login", "false");
+                                document.getElementById("listele3").setAttribute("login", "false");
+                                document.getElementById("listele4").setAttribute("login", "false");
+                                document.getElementById("listele5").setAttribute("login", "false");
+                                document.getElementById("listele6").setAttribute("login", "false");
+                                document.getElementById("listele7").setAttribute("login", "false");
+                            }} >
+                                <li id="listele7" className={styles.listElementonlogin}>
+                                    Sign out
                                 </li>
                             </Link>
                         </ul>
