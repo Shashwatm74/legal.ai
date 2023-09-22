@@ -14,7 +14,7 @@ function langsimpli() {
     };
     const summarizeText = async () => {
       try {
-        const response = await fetch("/summarize", {
+        const response = await fetch("http://localhost:5000/summarize", {
           method: "POST",
           headers: {
             "Content-Type": "application/x-www-form-urlencoded",
@@ -54,7 +54,11 @@ function langsimpli() {
               onChange={handleInputChange}
             />
             <div className={styles.subheading2}>Simplified Text</div>
+
             <div className={styles.result_box}>{simplifiedText}</div>
+            <button className={styles.submitbtn} onClick={summarizeText}>
+              SUBMIT
+            </button>
           </div>
         </section>
       </>

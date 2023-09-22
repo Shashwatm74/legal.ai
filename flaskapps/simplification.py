@@ -1,8 +1,10 @@
 from flask import Flask, request, jsonify
-from transformers import BartForConditionalGeneration, BartTokenizer
+from flask_cors import CORS
+from transformers import BartForConditionalGeneration, BartTokenizer, AutoModelForCausalLM, AutoTokenizer
 # import torch
 
 app = Flask(__name__)
+cors = CORS(app, resources={r"/summarize": {"origins": "http://localhost:3000"}})
 model_path = "facebook/bart-large-cnn"  
 model = BartForConditionalGeneration.from_pretrained(model_path)
 tokenizer = BartTokenizer.from_pretrained(model_path)
