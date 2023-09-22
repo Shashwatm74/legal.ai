@@ -25,7 +25,7 @@ function login() {
     //e.preventDefault();
     signInWithEmailAndPassword(auth, email, password)
       .then(() => {
-        document.getElementById("message").innerHTML = "Registration successful";
+        document.getElementById("message").innerHTML = "Login successful, redirecting to home...";
         setTimeout(() => {
           router.push('/');
         }, 1000);
