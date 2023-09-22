@@ -22,6 +22,7 @@ function langsimpli() {
           body: `input_text=${encodeURIComponent(inputText)}`,
         });
 
+
         if (response.ok) {
           const data = await response.json();
           setSimplifiedText(data.Summary);
@@ -39,6 +40,13 @@ function langsimpli() {
           <meta name="description" content="AI based legal assistant" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
+                    <div className={styles.result_box}>
+                        See your simplified text here...
+                    </div>
+                    <button className={styles.submitbtn}>SUBMIT</button>
+
+                </div>
+
 
         <section className={styles.section}>
           <div className={styles.sectionWrapper}>
