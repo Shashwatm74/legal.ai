@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "@/styles/components/services/langtrans.module.scss";
 import Head from "next/head";
 import logo from "@/assets/images/logo.png";
 import Image from "next/image";
 // import translation from "@/pages/translation.js";
 // import countries from "@/pages/countries.js";
-import { useEffect } from "react";
+
+
 const countries = {
     "am-ET": "Amharic",
     "ar-SA": "Arabic",
@@ -106,52 +107,59 @@ const countries = {
     "zu-ZA": "Zulu"
 }
 
-function langsimpli() {
-    if (typeof window === 'object') {
-        const fromText = document?.querySelector(".input_box"),
-            toText = document?.querySelector(".result_box"),
-            selectTag = document?.querySelectorAll("select"),
-            translateBtn = document?.querySelector(".submitbtn");
 
-        useEffect(() => {
-            // Logic to populate the select options here
-            const selectTag = document?.querySelectorAll("select");
-            selectTag.forEach(tag => {
-                console.log(tag);
-            });
-            selectTag?.forEach((tag, id) => {
-                for (let country_code in countries) {
-                    let selected = id == 0 ? country_code == "en-GB" ? "selected" : "" : country_code == "hi-IN" ? "selected" : "";
-                    let option = `<option ${selected} value="${country_code}">${countries[country_code]}</option>`;
-                    tag?.insertAdjacentHTML("beforeend", option);
+function langsimpli() {
+    const [fromText, setFromText] = useState("");
+    const [translatedText, setTranslatedText] = useState("");
+    const [selectedToLanguage, setSelectedFromLanguage] = useState("hi-IN");
+    const [selectedFromLanguage, setSelectedToLanguage] = useState("en-GB");
+
+    useEffect(() => {
+        // Populate select options when the component mounts
+        const selectTags = document.querySelectorAll("select");
+        selectTags.forEach((tag, id) => {
+            for (let country_code in countries) {
+                let selected =
+                    id === 0
+                        ? country_code === selectedFromLanguage
+                            ? "selected"
+                            : ""
+                        : country_code === selectedToLanguage
+                            ? "selected"
+                            : "";
+                let option = `<option ${selected} value="${country_code}">${countries[country_code]}</option>`;
+                tag.insertAdjacentHTML("beforeend", option);
+            }
+        });
+    }, []);
+
+    const handleTranslate = () => {
+        let text = fromText.trim();
+        let translateFrom = selectedFromLanguage;
+        let translateTo = selectedToLanguage;
+
+        if (!text) return;
+
+        setTranslatedText("Translating...");
+
+        let apiUrl = `https://api.mymemory.translated.net/get?q=${text}&langpair=${translateFrom}|${translateTo}`;
+
+        fetch(apiUrl)
+            .then((res) => res.json())
+            .then((data) => {
+                if (data.responseData) {
+                    setTranslatedText(data.responseData.translatedText);
+                } else {
+                    setTranslatedText("Translation not available");
                 }
             });
-        }, []);
-        translateBtn?.addEventListener("click", () => {
-            let text = fromText.value.trim(),
-                translateFrom = selectTag[1].value,
-                translateTo = selectTag[0].value;
-            console.log(text);
-            if (!text) return;
-            toText?.setAttribute("placeholder", "Translating...");
-            let apiUrl = `https://api.mymemory.translated.net/get?q=${text}&langpair=${translateFrom}|${translateTo}`;
-            fetch(apiUrl).then(res => res.json()).then(data => {
-                toText.value = data.responseData.translatedText;
-                data.matches.forEach(data => {
-                    if (data.id === 0) {
-                        toText.value = data.translation;
-                    }
-                });
-                toText?.setAttribute("placeholder", "Translation");
-            });
-        });
-    }
+    };
 
     return (
         <>
             <Head>
-                <title>Legal.ai</title>
-                <meta name="description" content="AI based legal assistant" />
+                <title>Language Translation</title>
+                <meta name="description" content="Language translation tool" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
@@ -161,35 +169,37 @@ function langsimpli() {
                     <textarea
                         className={styles.result_box}
                         placeholder="Translated text here..."
-                        required
-                        type="text"
+                        value={translatedText}
                         readOnly
-                        disabled
-                    // value={inputText}
-                    // onChange={handleInputChange}
                     />
-                    <select className={styles.select2} name="" id=""></select>
-                    <button className={styles.submitbtn}>TRANSLATE</button>
+                    <select
+                        className={styles.select2}
+                        name="toLanguage"
+                        value={selectedToLanguage}
+                        onChange={(e) => setSelectedToLanguage(e.target.value)}
+                    ></select>
+                    <button className={styles.submitbtn} onClick={handleTranslate}>
+                        TRANSLATE
+                    </button>
                     <div className={styles.subheading1}>Original Text</div>
                     <textarea
                         id="input_box"
                         className={styles.input_box}
                         placeholder="Enter your text..."
-                        required
-                        type="text"
-                    // value={inputText}
-                    // onChange={handleInputChange}
+                        value={fromText}
+                        onChange={(e) => setFromText(e.target.value)}
                     />
-                    <select className={styles.select1} name="" id=""></select>
+                    <select
+                        className={styles.select1}
+                        name="fromLanguage"
+                        value={selectedFromLanguage}
+                        onChange={(e) => setSelectedFromLanguage(e.target.value)}
+                    ></select>
                     <div className={styles.subheading2}>Translated Text</div>
-                    {/* <div className={styles.result_box}>{simplifiedText}</div> */}
                 </div>
             </section>
-            {/* <script src={translation} defer></script> */}
-            {/* <script src={countries} defer></script> */}
         </>
     );
 }
-
 
 export default langsimpli;
