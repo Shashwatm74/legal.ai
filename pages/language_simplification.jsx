@@ -38,7 +38,6 @@ function langsimpli() {
                         See your simplified text here...
                     </div>
 
-
                 </div>
 
 
