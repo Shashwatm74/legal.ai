@@ -205,7 +205,7 @@ function About() {
           {/* /////////////////////////////////////////// */}
           <Link className={styles.card3} href="/document_customization" replace>
             <div ref={card3Ref} className={styles.card3}>
-              Document Customization
+              Language Translation
             </div>
           </Link>
 
@@ -217,12 +217,12 @@ function About() {
           </Link>
           {/* /////////////////////////////////////////// */}
 
-          <Link className={styles.card5} href="/document_review" replace>
+          {/* <Link className={styles.card5} href="/document_review" replace>
             <div ref={card5Ref} className={styles.card5}>
               Document Review
             </div>
           </Link>
-          {/* /////////////////////////////////////////// */}
+          /////////////////////////////////////////// */}
 
         </div>
 
