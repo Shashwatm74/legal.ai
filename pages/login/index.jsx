@@ -31,6 +31,10 @@ function login() {
         }, 1000);
         document.getElementById("listele1").setAttribute("login", "true");
         document.getElementById("listele2").setAttribute("login", "true");
+        document.getElementById("listele3").setAttribute("login", "true");
+        document.getElementById("listele4").setAttribute("login", "true");
+        document.getElementById("listele5").setAttribute("login", "true");
+        document.getElementById("listele6").setAttribute("login", "true");
       }).catch((error) => {
         document.getElementById("message").innerHTML = error.message;
       })

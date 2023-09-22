@@ -35,23 +35,23 @@ const Nav = () => {
                                 </li>
                             </Link>
                             {/* this part of the navbar activates when the user logs in the website  */}
-                            <Link className={styles.a} href="/document_generator" replace onClick={() => { document.getElementById("SecondaryNav").setAttribute("data-visible", "false"); document.getElementById("NavToggle2")?.setAttribute("data-visible", "false"); }} >
-                                <li id="listele3" className={styles.listElement}>
+                            <Link className={styles.a} href="/document_generator" replace login="false" onClick={() => { document.getElementById("SecondaryNav").setAttribute("data-visible", "false"); document.getElementById("NavToggle2")?.setAttribute("data-visible", "false"); }} >
+                                <li id="listele3" className={styles.listElementonlogin}>
                                     Generate
                                 </li>
                             </Link>
-                            <Link className={styles.a} href="/language_simplification" replace onClick={() => { document.getElementById("SecondaryNav").setAttribute("data-visible", "false"); document.getElementById("NavToggle2")?.setAttribute("data-visible", "false"); }} >
-                                <li id="listele4" className={styles.listElement}>
+                            <Link className={styles.a} href="/language_simplification" replace login="false" onClick={() => { document.getElementById("SecondaryNav").setAttribute("data-visible", "false"); document.getElementById("NavToggle2")?.setAttribute("data-visible", "false"); }} >
+                                <li id="listele4" className={styles.listElementonlogin}>
                                     Simplify
                                 </li>
                             </Link>
-                            <Link className={styles.a} href="/language_translation" replace onClick={() => { document.getElementById("SecondaryNav").setAttribute("data-visible", "false"); document.getElementById("NavToggle2")?.setAttribute("data-visible", "false"); }} >
-                                <li id="listele5" className={styles.listElement}>
+                            <Link className={styles.a} href="/language_translation" replace login="false" onClick={() => { document.getElementById("SecondaryNav").setAttribute("data-visible", "false"); document.getElementById("NavToggle2")?.setAttribute("data-visible", "false"); }} >
+                                <li id="listele5" className={styles.listElementonlogin}>
                                     Translate
                                 </li>
                             </Link>
-                            <Link className={styles.a} href="/legal_advice" replace onClick={() => { document.getElementById("SecondaryNav").setAttribute("data-visible", "false"); document.getElementById("NavToggle2")?.setAttribute("data-visible", "false"); }} >
-                                <li id="listele6" className={styles.listElement}>
+                            <Link className={styles.a} href="/legal_advice" replace login="false" onClick={() => { document.getElementById("SecondaryNav").setAttribute("data-visible", "false"); document.getElementById("NavToggle2")?.setAttribute("data-visible", "false"); }} >
+                                <li id="listele6" className={styles.listElementonlogin}>
                                     Advice
                                 </li>
                             </Link>
