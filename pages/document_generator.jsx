@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "@/styles/components/services/LangSimpli.module.scss";
+import styles from "@/styles/components/services/docgen.module.scss";
 import Head from "next/head";
 import logo from "@/assets/images/logo.png";
 import Image from "next/image";
@@ -18,29 +18,29 @@ function docgen() {
 
                 <div className={styles.sectionWrapper}>
                     <div className={styles.heading} >
-                        Language Simplification
+                        Document Generation
                     </div>
 
                     <div className={styles.subheading1} >
                         Original Text
                     </div>
-                    <input
+                    <textarea
                         className={styles.input_box}
                         placeholder="Enter your text..."
                         required
                         type="text"
                     />
                     <div className={styles.subheading2} >
-                        Simplified Text
+                        Generated Document
                     </div>
 
                     <div className={styles.result_box}>
-                        See your simplified text here...
+                        See your generated document here...
                     </div>
 
 
+                    <button className={styles.submitbtn}>GENERATE</button>
                 </div>
-
 
             </section>
         </>

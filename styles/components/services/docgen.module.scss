@@ -1,0 +1,69 @@
+@import "@/styles/abstract/mixin";
+@import "@/styles/abstract/variable";
+
+.section {
+    @include section;
+}
+
+.sectionWrapper {
+    @include sectionWrapper;
+}
+
+.heading {
+    grid-row: 8 /span 12;
+    grid-column: 1/span 12;
+    color: $secondary-color;
+    font-size: 2.5em;
+    font-weight: bolder;
+    font-family: $primary-font;
+    padding-left: 2.6em;
+    padding-top: 0.6em;
+    border-bottom: 2px solid white;
+}
+
+.input_box {
+    grid-row: 37/span 42;
+    grid-column: 2/span 4;
+    color: $primary-color;
+    border: none;
+    border-radius: 5px;
+    background-color: $secondary-color;
+    padding: 2em;
+}
+
+.input_box:focus {
+    outline: none;
+}
+
+.result_box {
+    grid-row: 37/span 42;
+    grid-column: 8/span 4;
+    color: rgb(151, 151, 151);
+    border-radius: 5px;
+    background-color: $secondary-color;
+    padding: 2em;
+    overflow-y: scroll;
+}
+
+.subheading1 {
+    grid-row: 23/span 12;
+    grid-column: 2/span 4;
+    color: $secondary-color;
+    font-family: $primary-font;
+    font-size: 2em;
+}
+
+.subheading2 {
+    grid-row: 23/span 12;
+    grid-column: 8/span 4;
+    color: $secondary-color;
+    font-family: $primary-font;
+    font-size: 2em;
+}
+
+.submitbtn {
+    @include navbtn;
+    grid-row: 85/ span 5;
+    grid-column: 10;
+
+}

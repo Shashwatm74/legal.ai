@@ -96,6 +96,11 @@
     list-style: none;
 }
 
+.listElementonlogin[color="white"] {
+    @include nav-font-white;
+    @include navbtn-white;
+}
+
 
 
 
