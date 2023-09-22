@@ -31,7 +31,7 @@ if (typeof window === 'object') {
         // Toggle primary  nav
         navToggle?.addEventListener("click", () => {
             const visibilityProfile = primaryNav.getAttribute("data-visible");
-            // const visibilityMenu = SecondaryNav.getAttribute("data-visible");
+            const visibilityMenu = SecondaryNav.getAttribute("data-visible");
             if ((visibilityProfile === "false") && (visibilityMenu === "false")) {
                 primaryNav.setAttribute("data-visible", "true");
                 navToggle.setAttribute("data-visible", "true");
@@ -39,26 +39,26 @@ if (typeof window === 'object') {
             else if ((visibilityMenu === "true")) {
                 SecondaryNav.setAttribute("data-visible", "false");
                 navToggle2.setAttribute("data-visible", "false");
-                // primaryNav.setAttribute("data-visible", "true");
+                primaryNav.setAttribute("data-visible", "true");
                 navToggle.setAttribute("data-visible", "true");
             }
 
             else {
-                // primaryNav.setAttribute("data-visible", "false");
+                primaryNav.setAttribute("data-visible", "false");
                 navToggle.setAttribute("data-visible", "false");
             }
         });
 
         //Toggle secondary nav
         navToggle2?.addEventListener("click", () => {
-            // const visibilityProfile = primaryNav.getAttribute("data-visible");
+            const visibilityProfile = primaryNav.getAttribute("data-visible");
             const visibilityMenu = SecondaryNav.getAttribute("data-visible");
             if ((visibilityMenu === "false")) {
                 SecondaryNav.setAttribute("data-visible", "true");
                 navToggle2.setAttribute("data-visible", "true");
             }
             else if ((visibilityMenu === "false")) {
-                // primaryNav.setAttribute("data-visible", "false");
+                primaryNav.setAttribute("data-visible", "false");
                 navToggle.setAttribute("data-visible", "false");
                 SecondaryNav.setAttribute("data-visible", "true");
                 navToggle2.setAttribute("data-visible", "true");
