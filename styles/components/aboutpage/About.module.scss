@@ -11,6 +11,7 @@
 .sectionWrapper {
   @include sectionWrapper;
   column-gap: 1em;
+  background: url(./bg-about.jpeg), lightgray 50%;
 }
 
 
