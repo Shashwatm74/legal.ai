@@ -41,7 +41,7 @@ function docgen() {
 
       <section className={styles.section}>
         <div className={styles.sectionWrapper}>
-          <div className={styles.heading}>Language Simplification</div>
+          <div className={styles.heading}>Document Generation</div>
 
           <div className={styles.subheading1}>Original Text</div>
           <input
@@ -52,7 +52,7 @@ function docgen() {
             value={inputText}
             onChange={handleInputChange}
           />
-          <div className={styles.subheading2}>Simplified Text</div>
+          <div className={styles.subheading2}>Generated Document</div>
 
           <div className={styles.result_box}>{simplifiedText}</div>
 

@@ -29,7 +29,6 @@
 .header>div>nav,
 .header>div>nav>ul {
     transition: ease-in 0.1s;
-
 }
 
 .secondaryNavContainer {
@@ -58,6 +57,9 @@
     margin: 0px;
 }
 
+
+
+
 .listElement {
     @include nav-font;
     @include navbtn;
@@ -69,7 +71,7 @@
     @include navbtn-white;
 }
 
-.listElement[login="true"] {
+.listElementonlogin {
     display: none;
 }
 
@@ -77,6 +79,29 @@
     text-decoration: none;
     border-radius: 1.5em;
 }
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// handle login////////////////////////////////////////////////////////////////////////////////////////////////
+/// ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.listElement[login="true"] {
+    display: none;
+}
+
+.listElementonlogin[login="true"] {
+    display: block;
+    @include nav-font;
+    @include navbtn;
+    list-style: none;
+}
+
+.listElementonlogin[color="white"] {
+    @include nav-font-white;
+    @include navbtn-white;
+}
+
+
 
 
 
@@ -150,29 +175,30 @@
 }
 
 
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /// ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /// nav 1//////////////////////////////////////////////////////////////////////////////////////////////////////
 /// ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-.nav>ul {
-    @include profile-menu;
-    visibility: hidden;
-}
+// .nav>ul {
+//     @include profile-menu;
+//     visibility: hidden;
+// }
 
-.nav[data-visible="true"]>ul {
-    @include profile-menu;
-    visibility: visible;
-    margin-top: 4em;
-}
+// .nav[data-visible="true"]>ul {
+//     @include profile-menu;
+//     visibility: visible;
+//     margin-top: 4em;
+// }
 
 
 
-.nav {
-    padding-right: min(5%, 1rem);
-    align-self: right;
-}
+// .nav {
+//     padding-right: min(5%, 1rem);
+//     align-self: right;
+// }
 
 
 

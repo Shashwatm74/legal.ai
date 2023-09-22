@@ -10,7 +10,7 @@ function langsimpli() {
     const [simplifiedText, setSimplifiedText] = useState("");
 
     const handleInputChange = (event) => {
-      setInputText(event.target.value);
+        setInputText(event.target.value);
     };
     const summarizeText = async () => {
       try {
@@ -22,23 +22,24 @@ function langsimpli() {
           body: `input_text=${encodeURIComponent(inputText)}`,
         });
 
-        if (response.ok) {
-          const data = await response.json();
-          setSimplifiedText(data.Summary);
-        } else {
-          console.error("Failed to summarize text");
+
+            if (response.ok) {
+                const data = await response.json();
+                setSimplifiedText(data.Summary);
+            } else {
+                console.error("Failed to summarize text");
+            }
+        } catch (error) {
+            console.error("Error:", error);
         }
-      } catch (error) {
-        console.error("Error:", error);
-      }
     };
     return (
-      <>
-        <Head>
-          <title>Legal.ai</title>
-          <meta name="description" content="AI based legal assistant" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
+        <>
+            <Head>
+                <title>Legal.ai</title>
+                <meta name="description" content="AI based legal assistant" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
 
         <section className={styles.section}>
           <div className={styles.sectionWrapper}>

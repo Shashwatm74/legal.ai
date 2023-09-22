@@ -62,9 +62,35 @@
     font-family: $primary-font;
     font-size: 2em;
 }
+
 .submitbtn {
     @include navbtn;
     grid-row: 85/ span 5;
     grid-column: 10;
+}
 
+.select1 {
+    border-radius: 5px;
+    height: 25px;
+    grid-row: 82;
+    grid-column: 2;
+    background: $secondary-color;
+    color: $primary-color;
+}
+
+.select2 {
+    border-radius: 5px;
+    height: 25px;
+    grid-row: 82;
+    grid-column: 8;
+    background: $secondary-color;
+    color: $primary-color;
+}
+
+.select1 option {
+    background: $secondary-color;
+}
+
+.select2 option {
+    background: $secondary-color;
 }
